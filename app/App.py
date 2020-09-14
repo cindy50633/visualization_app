@@ -10,7 +10,7 @@ from tkinter import ttk
 
 from PathFrame import PathFrame
 from BtnFrame import BtnFrame
-from get_logo import get_logo
+from app_setting.get_logo import get_logo
 
 class MainFrame(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
@@ -27,11 +27,11 @@ class MainFrame(tk.Frame):
 
     def save_folder_settings(self):
         folder_path = self.path_frame.get_folder_path()
-        with open(os.path.join(self.script_path, 'path.pickle'), 'wb') as handle:
+        with open(os.path.join(self.script_path, 'app_setting', 'path.pickle'), 'wb') as handle:
             pickle.dump(folder_path, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     def load_settings(self, file='path.pickle'):
-        pickle_path = os.path.join(self.script_path, file)
+        pickle_path = os.path.join(self.script_path, 'app_setting', file)
         if os.path.isfile(pickle_path):
             with open(pickle_path, 'rb') as handle:
                 folder_path = pickle.load(handle)

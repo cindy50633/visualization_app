@@ -4,7 +4,7 @@ from tkinter import ttk
 from tkinter import font
 from tkinter import filedialog
 
-from error_window import error_window
+from app_setting.error_window import error_window
 
 
 class PathFrame(tk.Frame):

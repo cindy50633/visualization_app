@@ -5,8 +5,8 @@ from tkinter import ttk
 from tkinter import font
 from tkinter import filedialog
 
-from write_db import insert_db
-from error_window import error_window
+from run.write_db import insert_db
+from app_setting.error_window import error_window
 
 
 class ResultDBFrame(ttk.Frame):

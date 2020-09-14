@@ -7,7 +7,8 @@ from tkinter import font
 from tkinter import filedialog
 
 from ExportSettingWindow import SettingsFrame
-from error_window import error_window
+from app_setting.error_window import error_window
+
 
 class DBSettingsFrame(ttk.Frame):
     def __init__(self, parent, *args, **kwargs):
